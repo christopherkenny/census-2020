@@ -38,13 +38,13 @@ for (s in states) {
                   row_id=LOGRECNO, summary_level=SUMLEV,
                   pop = P0010001,
                   pop_white = P0020005,
-                  pop_black = P0020005 + P0020013 + 0.5*(P0010004-P0020005) + 0.5*(P0010011-P0020013),
+                  pop_black = P0020006 + P0020013 + 0.5*(P0010004-P0020006) + 0.5*(P0010011-P0020013),
                   pop_hisp = P0020002 + 0.5*(P0010004-P0020005) + 0.5*(P0010011-P0020013),
                   pop_other = pop - pop_white - pop_black - pop_hisp,
                   vap = P0030001,
                   vap_white = P0040005,
-                  vap_black = P0040005 + P0040013 + 0.5*(P0030004-P0040005) + 0.5*(P0030011-P0420013),
-                  vap_hisp = P0040002 + 0.5*(P0030004-P0040005) + 0.5*(P0030011-P0040013),
+                  vap_black = P0040006 + P0040013 + 0.5*(P0030004-P0040006) + 0.5*(P0030011-P0040013),
+                  vap_hisp = P0040002 + 0.5*(P0030004-P0040006) + 0.5*(P0030011-P0040013),
                   vap_other = vap - vap_white - vap_black - vap_hisp)
                   
     fips_d = censable::fips_2020 %>%
